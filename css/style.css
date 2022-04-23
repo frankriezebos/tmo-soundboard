@@ -1,0 +1,124 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0A1D2C;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 15px;
+    color: #FFF;
+}
+
+h2 {
+    color: #00ffd7;
+    font-size: 18px;
+}
+
+.header {
+    border-top: 8px solid #00ffd7;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.logo-wrap {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 350px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.logo.loaded {
+    transform: scale(1.2);
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.clickable-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    /* Makes sure the link doesn't get underlined */
+    z-index: 10;
+    /* raises anchor tag above everything else in div */
+    background-color: white;
+    /*workaround to make clickable in IE */
+    opacity: 0;
+    /*workaround to make clickable in IE */
+    filter: alpha(opacity=0);
+    /*workaround to make clickable in IE */
+    cursor: pointer;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.content-block {
+    margin-bottom: 40px;
+    width: 33.33%;
+    position: relative;
+}
+
+.content-block p {
+    font-weight: bold;
+}
+
+.content-block h2 {
+    color: white;
+}
+
+.content-block-image {
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/sound.svg');
+    width: 85px;
+    height: 85px;
+    border: 4px solid #FF0058;
+    border-radius: 250px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #FF0058;
+    transition: all 300ms;
+}
+
+.content-block-image.clicked {
+    background-size: 90%;
+    transform: rotate(-15deg);
+}

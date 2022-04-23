@@ -1,0 +1,26 @@
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .content-block h2 {
+        font-size: 14px;
+    }
+
+    .content-block {
+        width: calc(33.33% - 20px);
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .logo {
+        max-width: 250px;
+    }
+
+    .content-block {
+        width: calc(50% - 20px);
+    }
+}
