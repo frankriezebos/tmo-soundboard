@@ -6,14 +6,6 @@ $(window).on('load', function(){
     }, 300);
 });
 
-$('.content-block audio').attr('id', function (i) {
-    return 'audio' + (i + 1);
-});
-
-$('.content-block a').attr('onclick', function (i) {
-    return 'PlaySound' + (i + 1) + '()';
-});
-
 $('.content-block').click(function() {
     $(this).find('.content-block-image').addClass('clicked');
 
@@ -22,9 +14,13 @@ $('.content-block').click(function() {
     }, 300);
 });
 
-var audio1 = new Audio();
-audio1.src = "../audio/morning-devboyz.mp3";
+$('.content-block').each(function() {
+    var audioSrc = $(this).data('audio-src');
+    var clickableDiv = $(this).find('.clickable-div');
+    var audio = $(this).find('audio');
 
-function PlaySound1() {
-    audio1.play();
-}
+    clickableDiv.on('click', function() {
+        audio.attr('src', audioSrc);
+        audio.trigger('play');
+    });
+});
